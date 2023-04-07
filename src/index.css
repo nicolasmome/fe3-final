@@ -113,6 +113,23 @@ tr:nth-child(even) {
   background-color: #dddddd;
 }
 
+.dark, .bg-dark{
+  background-color: #12121296;
+  color: white;
+}
+.dark, .bg-dark > a {
+  color: white;
+}
+
+.is-fav-btn {
+  background-color: rgb(153, 51, 90);
+  color: white;
+  padding: 10px;
+  border: none;
+  width: 100%;
+  cursor: pointer;
+}
+/*
 .dark{
   background-color: #12121296;
   color: white;

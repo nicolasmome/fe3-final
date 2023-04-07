@@ -1,15 +1,17 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
-import App from './App';
 import { createBrowserRouter, RouterProvider} from "react-router-dom";
-import ErrorPage from "./errorPage";
+import App from "./App";
+import ErrorPage from "./error-page";
 import Home from "./Routes/Home";
+import Contact from "./Routes/Contact";
+import Favs from "./Routes/Favs";
+import Detail from "./Routes/Detail";
 
 const router = createBrowserRouter([
     {
-        path: "/",
-        element: <Root />,
+        element: <App />,
         errorElement: <ErrorPage />,
         children: [
             {
@@ -35,7 +37,7 @@ const router = createBrowserRouter([
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-      <App/>
+      <RouterProvider router={router} />
   </React.StrictMode>
 );
 

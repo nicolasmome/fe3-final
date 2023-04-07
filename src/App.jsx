@@ -1,13 +1,19 @@
 
 import Footer from "./Components/Footer";
-import Navbar from "./Components/Navbar";
+import Navbar from "./Components/Cabecera/Navbar";
+import {ContextProvider} from "./Components/utils/global.context";
+import {Outlet} from "react-router-dom";
+
 
 
 function App() {
   return (
       <div className="App">
-          <Navbar/>
-          <Footer/>
+          <ContextProvider>
+              <Navbar/>
+              <Outlet />
+              <Footer/>
+          </ContextProvider>
       </div>
   );
 }
