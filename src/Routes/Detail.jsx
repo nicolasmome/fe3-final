@@ -13,7 +13,6 @@ const Detail = () => {
   const dentist = state.dentists.find(d => d.id.toString() === id);
  
   // Consumiendo el parametro dinamico de la URL deberan hacer un fetch a un user en especifico
-
   {/* Deberan mostrar el name - email - phone - website por cada user en especifico */}
   return (
       <Card id={dentist.id} username={dentist.username} name={dentist.name} email={dentist.email} phone={dentist.phone} website={dentist.website} />

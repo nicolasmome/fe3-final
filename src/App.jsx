@@ -1,6 +1,6 @@
 
 import Footer from "./Components/Footer";
-import Navbar from "./Components/Cabecera/Navbar";
+import Navbar from "./Components/Navbar";
 import {ContextProvider} from "./Components/utils/global.context";
 import {Outlet} from "react-router-dom";
 

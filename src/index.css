@@ -129,11 +129,3 @@ tr:nth-child(even) {
   width: 100%;
   cursor: pointer;
 }
-/*
-.dark{
-  background-color: #12121296;
-  color: white;
-}
-.dark > a {
-  color: white;
-}

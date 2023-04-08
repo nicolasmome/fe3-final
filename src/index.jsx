@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom/client';
 import './index.css';
 import { createBrowserRouter, RouterProvider} from "react-router-dom";
 import App from "./App";
-import ErrorPage from "./error-page";
+import ErrorPage from "./errorPage";
 import Home from "./Routes/Home";
 import Contact from "./Routes/Contact";
 import Favs from "./Routes/Favs";
@@ -20,7 +20,7 @@ const router = createBrowserRouter([
             },
             {
                 path: "dentist/:id",
-                element: <Dentist />,
+                element: <Detail />,
             },
             {
                 path: "contact",

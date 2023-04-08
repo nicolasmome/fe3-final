@@ -2,13 +2,16 @@ import React, {useContext} from "react";
 import {Link} from "react-router-dom";
 import {ContextGlobal} from "./utils/global.context";
 
-const Card = ({ name, username, id, email, phone, website }) => {
-
-  const addFav = ()=>{
     // Aqui iria la logica para agregar la Card en el localStorage
-  }
+  const Card = ({ name, username, id, email, phone, website }) => {
+    const { state, dispatch } = useContext(ContextGlobal);
+    const fav = state.favs.some((d) => d.id === id)
+    const handleFavorites = () => {
+      console.log("clicked");
+      fav ? dispatch({type: "REMOVE_FAVORITE", payload: id}) : dispatch({type: "ADD_FAVORITE", payload: {name, username, id, email, phone, website}});
+      };
 
-  return (
+    return (
     <div className="card">
         {/* En cada card deberan mostrar en name - username y el id */}
 

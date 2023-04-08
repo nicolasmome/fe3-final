@@ -16,20 +16,17 @@ const Form = () => {
 
     const validateForm = () => {
         let errors = {};
-        const emailRegex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
         if (!name) {
-            errors.name = "Falta el nombre";
+            errors.name = "Falta nombre";
         }
         if (!email) {
-            errors.email = "Falta el correo";
-        } else if (!emailRegex.test(email)) {
-            errors.email = "El correo no es válido";
-        }
+            errors.email = "Falta correo";
+        } 
         if (telelefono && telelefono.trim().length < 7) {
             errors.telelefono = "El teléfono no es válido";
         }
         if (textArea.length < 10) {
-            errors.textArea = "Mensaje muy corto";
+            errors.textArea = "Mensaje corto";
         }
         setErrors(errors);
     }
@@ -37,10 +34,10 @@ const Form = () => {
     const handleSubmit = (e) => {
         e.preventDefault();
         if(Object.keys(errors).length === 0) {
-            console.log("Form sent");
-            alert("Gracias " + name + ", te contactaremos cuando antes vía mail.")
+            console.log("Formulario enviado");
+            alert("Gracias, estaremos en contacto "  + name )
         } else {
-            console.log("Form is invalid, ", {errors});
+            console.log("Formulario invalido ", {errors});
         }
     };
 

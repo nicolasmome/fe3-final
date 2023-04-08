@@ -11,9 +11,9 @@ const Navbar = () => {
     <>
     <nav className={state.theme === "light" ? "bg-dark" : "bg-light"}>
       {/* Aqui deberan agregar los liks correspondientes a las rutas definidas */}
-      <NavLink to="/home">Home</NavLink>
-      <NavLink to="/contact">Contáctanos</NavLink>
-      <NavLink to="/favs">Favoritos</NavLink>
+      <Link to={"/"}>Home</Link>
+      <Link to={"/contact"}>Contáctanos</Link>
+      <Link to={"/favs"}>Favoritos</Link>
       {/* Deberan implementar ademas la logica para cambiar de Theme con el button */}
       <button onClick={() => dispatch({ type: 'SWITCH_THEME' })}>Tema {state.theme === 'light' ? 'Oscuro' : 'Claro'}</button>
     </nav>
